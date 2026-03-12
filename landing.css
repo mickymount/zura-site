@@ -1,0 +1,261 @@
+:root {
+  --bg: #f4efe7;
+  --ink: #14213d;
+  --muted: #5f6776;
+  --panel: rgba(255, 255, 255, 0.74);
+  --line: rgba(20, 33, 61, 0.1);
+  --primary: #0f766e;
+  --primary-ink: #f8fafc;
+  --secondary: #e9dcc5;
+  --accent: #c2410c;
+  --shadow: 0 24px 60px rgba(20, 33, 61, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top left, rgba(194, 65, 12, 0.16), transparent 32%),
+    radial-gradient(circle at top right, rgba(15, 118, 110, 0.16), transparent 28%),
+    linear-gradient(180deg, #fbf7f1 0%, var(--bg) 100%);
+}
+
+body {
+  padding: 32px 18px 48px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.page-shell {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.hero,
+.panel {
+  backdrop-filter: blur(18px);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: 28px;
+  padding: 34px;
+  margin-bottom: 22px;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -70px -70px auto;
+  width: 220px;
+  height: 220px;
+  border-radius: 999px;
+  background: rgba(194, 65, 12, 0.08);
+}
+
+.hero__eyebrow,
+.kicker {
+  margin: 0 0 12px;
+  font-family: "Courier New", monospace;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: var(--accent);
+}
+
+.hero__brand {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.hero__mark {
+  width: 64px;
+  min-width: 64px;
+  height: 84px;
+  display: grid;
+  place-items: center;
+  padding-top: 14px;
+  border-radius: 18px 18px 12px 12px;
+  background: linear-gradient(180deg, #14213d 0%, #1e3a5f 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 84% 100%, 66% 82%, 48% 100%, 30% 82%, 12% 100%, 0 80%);
+}
+
+.hero__mark span {
+  display: block;
+  height: 6px;
+  border-radius: 999px;
+  background: #f7efe4;
+}
+
+.hero__mark span:nth-child(1) {
+  width: 32px;
+}
+
+.hero__mark span:nth-child(2) {
+  width: 22px;
+}
+
+.hero__mark span:nth-child(3) {
+  width: 16px;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 12px;
+  font-size: clamp(42px, 9vw, 72px);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+}
+
+h2 {
+  margin-bottom: 12px;
+  font-size: clamp(28px, 5vw, 40px);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+h3 {
+  margin-bottom: 8px;
+  font-size: 22px;
+}
+
+p,
+li {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.hero__subtitle {
+  max-width: 680px;
+  margin-bottom: 0;
+}
+
+.hero__actions,
+.footer-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 18px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 700;
+  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.button--primary {
+  color: var(--primary-ink);
+  background: linear-gradient(135deg, var(--primary) 0%, #155e75 100%);
+  box-shadow: 0 12px 30px rgba(15, 118, 110, 0.24);
+}
+
+.button--secondary {
+  background: var(--secondary);
+  border: 1px solid rgba(20, 33, 61, 0.08);
+}
+
+.panel {
+  border-radius: 24px;
+  padding: 28px;
+  margin-bottom: 22px;
+}
+
+.panel--split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(280px, 0.8fr);
+  gap: 20px;
+}
+
+.panel--footer {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 18px;
+  align-items: end;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.feature-card,
+.stack-card {
+  border-radius: 18px;
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(20, 33, 61, 0.08);
+}
+
+.bullet-list {
+  padding-left: 20px;
+}
+
+.bullet-list--tight li {
+  margin-bottom: 8px;
+}
+
+@media (max-width: 800px) {
+  .hero,
+  .panel {
+    padding: 22px;
+  }
+
+  .hero__brand,
+  .panel--split,
+  .panel--footer,
+  .feature-grid {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+
+  .hero__brand {
+    gap: 16px;
+  }
+
+  .hero__mark {
+    width: 54px;
+    min-width: 54px;
+    height: 72px;
+  }
+
+  p,
+  li {
+    font-size: 16px;
+  }
+}

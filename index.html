@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ReceiptIQ</title>
+    <meta
+      name="description"
+      content="ReceiptIQ helps freelancers and small businesses capture receipts, categorize spend, track mileage, and stay tax-ready."
+    />
+    <link rel="stylesheet" href="./landing.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div class="hero__eyebrow">Zura presents</div>
+        <div class="hero__brand">
+          <div class="hero__mark" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div>
+            <h1>ReceiptIQ</h1>
+            <p class="hero__subtitle">
+              AI expense capture for freelancers and small teams who want clean books without month-end chaos.
+            </p>
+          </div>
+        </div>
+        <div class="hero__actions">
+          <a class="button button--primary" href="#overview">View capabilities</a>
+          <a class="button button--secondary" href="#public-url">Why this page exists</a>
+        </div>
+      </header>
+
+      <main>
+        <section class="panel" id="overview">
+          <div class="panel__intro">
+            <p class="kicker">What it does</p>
+            <h2>Turns receipts into clean records</h2>
+            <p>
+              Upload paper or digital receipts, extract vendor, date, totals, and line items, then push reviewed data
+              into export, tax, and accounting workflows.
+            </p>
+          </div>
+          <div class="feature-grid">
+            <article class="feature-card">
+              <h3>AI categorization</h3>
+              <p>Auto-tags expenses and keeps uncertain items in review instead of silently posting bad data.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Tax-ready exports</h3>
+              <p>Schedule C-friendly summaries, PDF exports, mileage deductions, and approval-aware reporting.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Audit trail</h3>
+              <p>Immutable receipt history, approval events, export logs, and long-term archive support.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Workflow depth</h3>
+              <p>Works for solo operators now, with team policies, reimbursements, and accounting sync when needed.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel panel--split">
+          <div>
+            <p class="kicker">Who it is for</p>
+            <h2>Built for real-world operators</h2>
+            <ul class="bullet-list">
+              <li>Freelancers managing deductions, client-billable spend, and quarterly tax prep</li>
+              <li>Small businesses needing approvals, auditability, and cleaner books</li>
+              <li>Teams replacing shoebox receipts, spreadsheets, and manual categorization</li>
+            </ul>
+          </div>
+          <div class="stack-card">
+            <p class="kicker">Platform snapshot</p>
+            <h2>Secure by default</h2>
+            <ul class="bullet-list bullet-list--tight">
+              <li>FastAPI backend with transactional outbox delivery</li>
+              <li>React web and Expo mobile clients</li>
+              <li>Postgres, Redis, MinIO, Vault, SonarQube, Trivy, ZAP, Nexus</li>
+              <li>Plaid, Stripe, QuickBooks, and Xero integrations in progress</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="panel panel--footer" id="public-url">
+          <div>
+            <p class="kicker">Public page purpose</p>
+            <h2>Temporary company/application URL</h2>
+            <p>
+              This page exists so provider consoles such as Xero can reference a valid public application URL while the
+              main production domain is still being finalized.
+            </p>
+          </div>
+          <div class="footer-actions">
+            <a class="button button--primary" href="#overview">Product summary</a>
+            <a class="button button--secondary" href="#public-url">Public URL details</a>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
