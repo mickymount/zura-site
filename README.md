@@ -1,4 +1,4 @@
-# ReceiptIQ Public Site Template
+# Zura Public Site Template
 
 This folder is a standalone GitHub Pages template for a separate public repository.
 
